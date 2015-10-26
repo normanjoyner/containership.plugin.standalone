@@ -1,0 +1,20 @@
+sudo: required
+
+language: node_js
+
+node_js:
+  - "0.10"
+before_install:
+  - apt-get update
+  - apt-get install virtualbox -y
+  - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
+  - dpkg -i vagrant_1.7.4_x86_64.deb
+  - npm install
+
+script:
+  - npm test
+
+notifications:
+  slack:
+    secure: jo2ABD0druwgZp9MywOz4svnVTAhYyTFpnLzuarXIkhL5ef1VPULW//js0hUwZM5znQKE65NOV/OTZrehZdrE94v9d2dMSSmP/xPsHvtgA0bdTDpwPHwSbjz71eiMZWWBH5CRePmsIMPZxHE682iNqRfocWLQCGv+SEfNrDEnJfUULs9QWXs0HVYaozbireYnYhElZKPwrZ4Z+YNwhVmNSwqBVosssOK7yCW8ipdvfTcUfC4TZnFHWfiOB9X8z2K6wrMEh4nnbKZjMuolTjgXm66GiWbPNSpoENNokK/M7WlrdMeYR8oKN0HpUURR8Wvb5FxVhBEbn+l9kzK+qyw+3WFJnDjGX5m+TOURVG16sYDQL5wzceMYUh1od2HenqN3yHzHQq6iHCsCd+WuFwWaXKDm8RXPbViJjAw17DJZmCUoWZEUTQKxN8U30AuZEegoiXVIPFOCBm2mEmZJQf6fHVhW6yG33XP1Rd9Gx7beDJ8PZwzdRDzifw9sygSPDiGot0xNP/tQFaIPx5aBtpWz3hKJNwnrwr/56wGH3kIkJmWhnMBjvpAXIQ45ppbL73+q3WoqeVkOVmOO02goFDphcDFTmHO7rKAuDNizoG0UvjnT1IBkwOUfpSK2+bHri/Y63FYwyOBhG0q1Xp5BiYyy6ypGipQZ2qAb25AQhrWO2I=
+  email: false

@@ -1,0 +1,27 @@
+{
+  "name": "containership.plugin.standalone",
+  "version": "0.0.0",
+  "description": "Official ContainerShip plugin for launching a local ContainerShip cluster",
+  "main": "application.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/containership/containership.plugin.standalone.git"
+  },
+  "author": "ContainerShip Developers <developers@containership.io>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/containership/containership.plugin.standalone/issues"
+  },
+  "homepage": "https://github.com/containership/containership.plugin.standalone",
+  "dependencies": {
+    "async": "^1.4.2",
+    "containership.plugin": "^0.2.2",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
