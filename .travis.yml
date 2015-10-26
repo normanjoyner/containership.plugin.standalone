@@ -5,8 +5,8 @@ language: node_js
 node_js:
   - "0.10"
 before_install:
-  - apt-get update
-  - apt-get install virtualbox -y
+  - sudo apt-get update
+  - sudo apt-get install virtualbox -y
   - wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.4_x86_64.deb
   - dpkg -i vagrant_1.7.4_x86_64.deb
   - npm install
